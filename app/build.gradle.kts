@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    kotlin("plugin.serialization") version "2.1.20"
 }
 
 android {
@@ -56,6 +57,9 @@ dependencies {
     implementation (libs.androidx.navigation.runtime.ktx)
     implementation (libs.androidx.lifecycle.lifecycle.viewmodel.compose10)
     implementation (libs.fluent.system.icons)
+    implementation(libs.firebase.annotations)
+
+    implementation(libs.kotlinx.serialization.json)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
